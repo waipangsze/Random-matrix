@@ -1,7 +1,5 @@
 import numpy as np
-import os
-import sys
-import time
+import os, sys, time
 import multiprocessing
 import xy_fermion, sys_info
 import matplotlib.pyplot as plt
