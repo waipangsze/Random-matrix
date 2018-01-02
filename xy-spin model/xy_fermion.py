@@ -18,8 +18,8 @@ def Hamiltonian(n, gamma, disorder):
     for __ in range(set_ensemble):
         manybody_energy = np.zeros(2**n)
         delta_energy = np.zeros(2**n -1)
-        Jx = 1.0 + gamma + disorder * np.random.uniform(-disorder, disorder, n - 1) # open boundary condition
-        Jy = 1.0 - gamma + disorder * np.random.uniform(-disorder, disorder, n - 1)
+        Jx = 1.0 + gamma + np.random.uniform(-disorder, disorder, n - 1) # open boundary condition
+        Jy = 1.0 - gamma + np.random.uniform(-disorder, disorder, n - 1)
         tj = (Jx + Jy)/4.0
         deltaj = (Jx - Jy)/4.0
 
@@ -83,8 +83,8 @@ def Hamiltonian_part_spectrum(n, gamma, disorder):
     for se in range(set_ensemble):
         manybody_energy = np.zeros(2**n)
         delta_energy = np.zeros(2**n -1)
-        Jx = 1.0 + gamma + disorder * np.random.uniform(-disorder, disorder, n - 1)
-        Jy = 1.0 - gamma + disorder * np.random.uniform(-disorder, disorder, n - 1)
+        Jx = 1.0 + gamma + np.random.uniform(-disorder, disorder, n - 1)
+        Jy = 1.0 - gamma + np.random.uniform(-disorder, disorder, n - 1)
         tj = (Jx + Jy)/4.0
         deltaj = (Jx - Jy)/4.0
 
